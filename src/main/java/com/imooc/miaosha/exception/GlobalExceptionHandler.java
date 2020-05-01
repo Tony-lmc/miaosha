@@ -16,7 +16,7 @@ import com.imooc.miaosha.result.Result;
 @ControllerAdvice
 @ResponseBody
 public class GlobalExceptionHandler {
-	@ExceptionHandler(value=Exception.class)
+	@ExceptionHandler(value=Exception.class)//拦截所有的异常
 	public Result<String> exceptionHandler(HttpServletRequest request, Exception e){
 		e.printStackTrace();
 		if(e instanceof GlobalException) {
